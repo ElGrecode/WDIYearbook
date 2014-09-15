@@ -13,9 +13,19 @@ module.exports = function(grunt) {
 				files: '**/*.scss',
 				tasks: ['sass']
 			}
+		},
+		connect: {
+			 server: {
+			 	 options: {
+			 	 	base: 'app',
+			        keepalive: true
+			 	 }
+			 }
 		}
+   
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.registerTask('default',['watch']);
 }

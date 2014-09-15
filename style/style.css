@@ -1,5 +1,22 @@
-body h1 {
-  background: red;
-  color: orange;
-  font-size: 5em;
-  border: 1px solid blue; }
+/*********************
+COLOR VARIABLES
+*********************/
+/*********************
+BREAKPOINTS
+*********************/
+body {
+  font-size: 16px;
+  background: orange; }
+
+@media (min-width: 30em) {
+  body {
+    background: blue; } }
+@media (min-width: 45em) {
+  body {
+    background: #4d6cff; } }
+@media (min-width: 60em) {
+  body {
+    background: black; } }
+@media (min-width: 70em) {
+  body {
+    background: lightblue; } }

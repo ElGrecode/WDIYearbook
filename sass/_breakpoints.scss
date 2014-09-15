@@ -1,0 +1,18 @@
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($size) {
+  @if $size == xlg {
+     @media (min-width: 70em) { @content ; }
+  }
+  @else if $size == lg {
+     @media (min-width: 60em) { @content ; }
+  }
+  @else if $size == med {
+     @media (min-width: 45em) { @content ; }
+  }
+  @else if $size == sm {
+     @media (min-width: 30em)  { @content ; }
+  }
+}

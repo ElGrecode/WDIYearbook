@@ -1,9 +1,32 @@
-body {
-	h1 {
-		background: red;
-		color: orange;
-		font-size: 5em;
-		border: 1px solid blue;
+@import 'colorvars';
+@import 'breakpoints';
 
+// defaults
+body {
+	font-size: 16px;
+	background: orange;
+}
+
+@include breakpoint('sm'){
+	body{
+		background: blue;
+	}
+}
+
+@include breakpoint('med'){
+	body{
+		background: $adamBlue;
+	}
+}
+
+@include breakpoint('lg'){
+	body{
+		background: black;
+	}
+}
+
+@include breakpoint('xlg'){
+	body{
+		background: lightblue;
 	}
 }
