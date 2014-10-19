@@ -1,5 +1,6 @@
 @import 'colorvars';
 @import 'breakpoints';
+@import 'experiment';
 
 // defaults
 body {
@@ -21,7 +22,7 @@ body {
 
 @include breakpoint('lg'){
 	body{
-		background: black;
+		background: red;
 	}
 }
 
