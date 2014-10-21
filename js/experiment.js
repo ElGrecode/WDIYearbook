@@ -36,7 +36,7 @@ $(function(){
                 this.el.html('');
 
                 // logic that dictates the panels and panel rotation
-                for(i = 0; i < rounds; i++) {
+                for(i = 0; i <  ; i++) {
                     $ul = $('<ul>');
                     xRotation = rotationPerRound * i;
                     $ul[0].style[transformProp] = "rotateX("+ xRotation + "deg)";
