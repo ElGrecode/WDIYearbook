@@ -44,6 +44,10 @@ $(function(){
                         $li = $('<li>');
                         yRotation = rotationPerPanel * j;
                         $li[0].style[transformProp] = "rotateY("+ yRotation +"deg) translateZ("+ zTranslate +"px)";
+                        $li.css("background-color", "red");
+                        // This creates images in numeric order
+                        $li.attr("bg-img", (i*(24)+(j/2))-24+".jpg");
+                        $li.attr("person-data", "page"+i+"a"+j);
                         $ul.append($li);
                     }
                     $container.append($ul);
@@ -149,4 +153,25 @@ $(function(){
             return v1 >= v2;
         }
     });
+
+    var panelElems = $('li');
+    var topPanels = panelElems.filter(function(a){
+        if(panelElems[a].style.transform.indexOf('rotateY(270deg)') === 0 || panelElems[a].style.transform.indexOf('rotateY(90deg)') === 0){
+            return true;    
+        }
+    });
+
+    topPanels.hide();
+
+    $('li').on('click', function(){
+        var sendToPage = $(this).attr('person-data');
+        window.location = '#' + sendToPage;
+        var that = $(this);
+        that.closest('body').prepend(that);
+        setTimeout(function(){
+            that.addClass('expand');
+        }, 10);
+        
+        // $(this).addClass('expand');
+    })
 });
